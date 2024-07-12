@@ -1,0 +1,221 @@
+{
+  "component-definition": {
+    "uuid": "da9d5836-8f6f-458c-bef2-dabc92a7db15",
+    "metadata": {
+      "title": "Component definition for Red Hat Enterprise Linux",
+      "last-modified": "2024-07-12T11:14:29+00:00",
+      "version": "develop",
+      "oscal-version": "1.1.2"
+    },
+    "components": [
+      {
+        "uuid": "02012685-4980-4612-89f6-a85e7b60003d",
+        "type": "service",
+        "title": "os",
+        "description": "RHEL operating system",
+        "props": [
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_max_auth_tries",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure sshd MaxAuthTries is configured",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_max_auth_tries_value",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "maximum number of authentication attempts permitted per connection",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_maxstartups",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure sshd MaxStartups is configured",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_sshd_set_maxstartups",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "maximum number of concurrent unauthenticated connections to the SSH daemon",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_max_sessions",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure sshd MaxSessions is configured",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_sshd_max_sessions",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "maximum number of open sessions permitted from a given connection",
+            "remarks": "rule_set_2"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "128908fe-f6d7-49b2-a114-8922b213a2cd",
+            "source": "profiles/rhel8-sample/profile.json",
+            "description": "Red Hat Enterprise Linux 8 Sample Profile",
+            "set-parameters": [
+              {
+                "param-id": "sshd_max_auth_tries_value",
+                "values": [
+                  "4"
+                ]
+              },
+              {
+                "param-id": "var_sshd_set_maxstartups",
+                "values": [
+                  "10:30:60"
+                ]
+              },
+              {
+                "param-id": "var_sshd_max_sessions",
+                "values": [
+                  "10"
+                ]
+              }
+            ],
+            "implemented-requirements": [
+              {
+                "uuid": "59298756-6c6b-476c-964b-ef66d651fed5",
+                "control-id": "CIS-5.2.16",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "sshd_set_max_auth_tries"
+                  }
+                ]
+              },
+              {
+                "uuid": "08d3f33e-17bc-46f2-9c09-7e6056380969",
+                "control-id": "CIS-5.2.17",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "sshd_set_maxstartups"
+                  }
+                ]
+              },
+              {
+                "uuid": "b601b2bd-5db0-4112-accd-77cc989914fc",
+                "control-id": "CIS-5.2.18",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "sshd_set_max_sessions"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "456b5457-e52b-4cc7-bc8a-3c8af9ed4a51",
+        "type": "Validation",
+        "title": "Ansible",
+        "description": "Ansible",
+        "props": [
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_max_auth_tries",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "check_sshd_set_max_auth_tries",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Check sshd MaxAuthTries is configured",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_maxstartups",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "check_sshd_set_maxstartups",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Check sshd MaxStartups is configured",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "sshd_set_max_sessions",
+            "remarks": "rule_set_5"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "check_sshd_set_max_sessions",
+            "remarks": "rule_set_5"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Check sshd MaxSessions is configured",
+            "remarks": "rule_set_5"
+          }
+        ],
+        "control-implementations": []
+      }
+    ]
+  }
+}
