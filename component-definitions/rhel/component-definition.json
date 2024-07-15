@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "9a169f7b-7b8e-4e2a-b6ca-ed67c49d99ba",
+    "uuid": "236ec3ae-8148-4166-a041-5a4c8fe9b655",
     "metadata": {
       "title": "Component definition for Red Hat Enterprise Linux",
-      "last-modified": "2024-07-15T08:15:21+00:00",
+      "last-modified": "2024-07-15T08:18:56+00:00",
       "version": "develop",
       "oscal-version": "1.1.2"
     },
     "components": [
       {
-        "uuid": "d1db278a-a37c-487c-b2e2-ffdbb85b56ec",
+        "uuid": "958100e3-3872-4c68-8ef6-9234d3b6a339",
         "type": "service",
         "title": "os",
         "description": "RHEL operating system",
@@ -89,7 +89,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "3a5fdbad-176b-4a2e-b021-2cec135cbb79",
+            "uuid": "c5714c0b-e328-4727-af92-c6a1a715d03f",
             "source": "profiles/rhel8-sample/profile.json",
             "description": "Red Hat Enterprise Linux 8 Sample Profile",
             "set-parameters": [
@@ -114,7 +114,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "8a8953ca-a9d0-4ab1-a14a-478c478da8aa",
+                "uuid": "74536c34-cfe4-4a72-8915-e864f7003917",
                 "control-id": "CIS-5.2.16",
                 "description": "",
                 "props": [
@@ -126,7 +126,7 @@
                 ]
               },
               {
-                "uuid": "32c10451-5fda-4e81-8a23-722c92ad995a",
+                "uuid": "a0ccd884-6f14-4dea-b031-02c761eed838",
                 "control-id": "CIS-5.2.17",
                 "description": "",
                 "props": [
@@ -138,7 +138,7 @@
                 ]
               },
               {
-                "uuid": "54b9ba6a-266f-4f64-bc7f-67241c0e7407",
+                "uuid": "e6fcbfd5-e63c-48a7-9115-cd609346e4d9",
                 "control-id": "CIS-5.2.18",
                 "description": "",
                 "props": [
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "uuid": "b53faa50-1edc-4ed1-a2d4-461dc3f5f6c5",
+        "uuid": "64365b23-0af1-4cfd-8b50-70bd21158dd7",
         "type": "Validation",
         "title": "Ansible",
         "description": "Ansible",
