@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "da9d5836-8f6f-458c-bef2-dabc92a7db15",
+    "uuid": "9a169f7b-7b8e-4e2a-b6ca-ed67c49d99ba",
     "metadata": {
       "title": "Component definition for Red Hat Enterprise Linux",
-      "last-modified": "2024-07-12T11:14:29+00:00",
+      "last-modified": "2024-07-15T08:15:21+00:00",
       "version": "develop",
       "oscal-version": "1.1.2"
     },
     "components": [
       {
-        "uuid": "02012685-4980-4612-89f6-a85e7b60003d",
+        "uuid": "d1db278a-a37c-487c-b2e2-ffdbb85b56ec",
         "type": "service",
         "title": "os",
         "description": "RHEL operating system",
@@ -89,7 +89,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "128908fe-f6d7-49b2-a114-8922b213a2cd",
+            "uuid": "3a5fdbad-176b-4a2e-b021-2cec135cbb79",
             "source": "profiles/rhel8-sample/profile.json",
             "description": "Red Hat Enterprise Linux 8 Sample Profile",
             "set-parameters": [
@@ -102,7 +102,7 @@
               {
                 "param-id": "var_sshd_set_maxstartups",
                 "values": [
-                  "10:30:60"
+                  "0.438194444"
                 ]
               },
               {
@@ -114,7 +114,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "59298756-6c6b-476c-964b-ef66d651fed5",
+                "uuid": "8a8953ca-a9d0-4ab1-a14a-478c478da8aa",
                 "control-id": "CIS-5.2.16",
                 "description": "",
                 "props": [
@@ -126,7 +126,7 @@
                 ]
               },
               {
-                "uuid": "08d3f33e-17bc-46f2-9c09-7e6056380969",
+                "uuid": "32c10451-5fda-4e81-8a23-722c92ad995a",
                 "control-id": "CIS-5.2.17",
                 "description": "",
                 "props": [
@@ -138,7 +138,7 @@
                 ]
               },
               {
-                "uuid": "b601b2bd-5db0-4112-accd-77cc989914fc",
+                "uuid": "54b9ba6a-266f-4f64-bc7f-67241c0e7407",
                 "control-id": "CIS-5.2.18",
                 "description": "",
                 "props": [
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "uuid": "456b5457-e52b-4cc7-bc8a-3c8af9ed4a51",
+        "uuid": "b53faa50-1edc-4ed1-a2d4-461dc3f5f6c5",
         "type": "Validation",
         "title": "Ansible",
         "description": "Ansible",
@@ -178,6 +178,18 @@
             "remarks": "rule_set_3"
           },
           {
+            "name": "Fetcher_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Checker_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
+            "remarks": "rule_set_3"
+          },
+          {
             "name": "Rule_Id",
             "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "sshd_set_maxstartups",
@@ -196,6 +208,18 @@
             "remarks": "rule_set_4"
           },
           {
+            "name": "Fetcher_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Checker_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
+            "remarks": "rule_set_4"
+          },
+          {
             "name": "Rule_Id",
             "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "sshd_set_max_sessions",
@@ -211,6 +235,18 @@
             "name": "Check_Description",
             "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Check sshd MaxSessions is configured",
+            "remarks": "rule_set_5"
+          },
+          {
+            "name": "Fetcher_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
+            "remarks": "rule_set_5"
+          },
+          {
+            "name": "Checker_Prompt",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "<Text description or contextual information for rule>\\n\\nInput: <Please provide an Ansible playbook for .. (sample rule desc)>\\n\\nOutput:\\n---\\n <Sample YAML playbook for the Input mentioned above>\\n --- \\n\\n Input: <This is actual rule description for which the playbook is required. Please provide an Ansible playbook for .. (replace .. with rule desc.)>\\n\\n Output:\\n",
             "remarks": "rule_set_5"
           }
         ],
